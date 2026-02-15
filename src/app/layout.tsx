@@ -15,8 +15,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "ChopK - Men's Pelvic Floor Training",
-  description: "Master control. Enhance performance. The straightforward guide to men's pelvic floor health.",
+  title: "ChopK: Men's Pelvic Floor Training App for Better Control & Confidence | No Pills Needed",
+  description: "The science-backed ChopK app guides men through pelvic floor kegel exercises — Locate, Engage, Train — to build lasting control, stamina, and confidence without pills or guesswork.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "ChopK - Men's Pelvic Floor Training",
-    description: "Master control. Enhance performance. The straightforward guide to men's pelvic floor health.",
+    title: "ChopK: Men's Pelvic Floor Training App for Better Control & Confidence | No Pills Needed",
+    description: "The science-backed ChopK app guides men through pelvic floor kegel exercises — Locate, Engage, Train — to build lasting control, stamina, and confidence without pills or guesswork.",
     url: "https://chopk.com",
     siteName: "ChopK",
     images: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         url: "https://res.cloudinary.com/dcr0te1k4/image/upload/v1771111380/chopk-logo-kegel-app-upload_opqcda.png",
         width: 1200,
         height: 630,
-        alt: "ChopK Logo",
+        alt: "ChopK — Science-backed pelvic floor kegel training app for men",
       },
     ],
     locale: "en_US",
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ChopK - Men's Pelvic Floor Training",
-    description: "Master control. Enhance performance. The straightforward guide to men's pelvic floor health.",
+    title: "ChopK: Men's Pelvic Floor Training App for Better Control & Confidence | No Pills Needed",
+    description: "The science-backed ChopK app guides men through pelvic floor kegel exercises — Locate, Engage, Train — to build lasting control, stamina, and confidence without pills or guesswork.",
     images: ["https://res.cloudinary.com/dcr0te1k4/image/upload/v1771111380/chopk-logo-kegel-app-upload_opqcda.png"],
   },
 };

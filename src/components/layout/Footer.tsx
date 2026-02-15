@@ -1,16 +1,25 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export function Footer() {
   return (
-    <footer className="w-full py-12 mt-20 border-t border-white/5 bg-black/20">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-sub-text/60">
-        <p>&copy; {new Date().getFullYear()} ChopK. All rights reserved.</p>
+    <motion.footer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="w-full py-16 mt-24 border-t border-white/[0.06] bg-gradient-to-t from-black/30 to-transparent"
+    >
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 text-sm text-sub-text/50">
+        <p className="tracking-wide">&copy; {new Date().getFullYear()} ChopK. Science-backed pelvic floor training for men. All rights reserved.</p>
         
-        <div className="flex items-center gap-6">
-          <Link href="#" className="hover:text-accent transition-colors">Privacy Policy</Link>
-          <Link href="#" className="hover:text-accent transition-colors">Terms of Service</Link>
+        <div className="flex items-center gap-8">
+          <Link href="#" className="hover:text-accent transition-colors duration-300 tracking-wide">Privacy Policy</Link>
+          <Link href="#" className="hover:text-accent transition-colors duration-300 tracking-wide">Terms of Service</Link>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

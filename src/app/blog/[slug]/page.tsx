@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${post.title} - ChopK`,
+    title: `${post.title} | ChopK Pelvic Floor Training Blog`,
     description: post.excerpt,
     openGraph: {
       title: post.title,
@@ -58,6 +58,11 @@ export default async function BlogPostPage({ params }: PageProps) {
       "@type": "Person",
       name: post.author.name,
     },
+    publisher: {
+      "@type": "Organization",
+      name: "ChopK",
+      url: "https://chopk.com",
+    },
     description: post.excerpt,
   };
 
@@ -73,7 +78,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       <Link href="/blog" className="inline-flex items-center text-sub-text/60 hover:text-white mb-12 transition-colors group text-sm font-medium tracking-wide uppercase">
         <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-        Back to Training Log
+        Back to Pelvic Floor Training Log
       </Link>
 
       <GlassCard className="p-8 md:p-16 relative overflow-visible" borderGlow>
@@ -114,12 +119,12 @@ export default async function BlogPostPage({ params }: PageProps) {
         <div className="mt-16 pt-16 border-t border-white/5 bg-gradient-to-b from-transparent to-white/5 -mx-8 -mb-16 px-8 pb-16 rounded-b-2xl">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-3xl mx-auto">
                 <div className="text-center md:text-left">
-                    <h3 className="text-2xl font-bold text-white mb-2">Ready to take control?</h3>
-                    <p className="text-sub-text/70 text-lg">Start your training journey today.</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">Ready to Start Science-Backed Pelvic Floor Training?</h3>
+                    <p className="text-sub-text/70 text-lg">The ChopK app guides you through Locate, Engage, Train — step by step.</p>
                 </div>
                  <Link href="https://play.google.com/store/apps/details?id=com.chopk.app" target="_blank">
                   <Button size="lg" className="neon-glow px-10 py-4 text-lg">
-                    Get ChopK App
+                    Start Your Pelvic Floor Journey
                   </Button>
                 </Link>
             </div>

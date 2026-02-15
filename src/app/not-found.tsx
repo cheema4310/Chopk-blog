@@ -8,10 +8,10 @@ export default function NotFound() {
       <div className="absolute">
         <h2 className="text-3xl font-bold text-white mb-4">Page Not Found</h2>
         <p className="text-sub-text/70 mb-8 max-w-md">
-          The page you are looking for has been moved or does not exist.
+          This page has moved or doesn&apos;t exist. Head back to explore science-backed pelvic floor training guides for men.
         </p>
         <Link href="/">
-          <Button>Return Home</Button>
+          <Button>Back to ChopK Home</Button>
         </Link>
       </div>
     </div>

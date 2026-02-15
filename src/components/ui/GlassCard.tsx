@@ -1,24 +1,35 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 import React from "react";
 
 interface GlassCardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   borderGlow?: boolean;
+  hover?: boolean;
 }
 
-export function GlassCard({ children, className, borderGlow = false, ...props }: GlassCardProps) {
+export function GlassCard({ children, className, borderGlow = false, hover = true, ...props }: GlassCardProps) {
   return (
-    <div
+    <motion.div
+      whileHover={hover ? {
+        y: -6,
+        scale: 1.015,
+        transition: { duration: 0.35, ease: [0.25, 0.8, 0.25, 1] },
+      } : undefined}
       className={cn(
         "glass-card relative overflow-hidden",
-        borderGlow && "border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.05)]",
+        borderGlow && "border-glow",
         className
       )}
-      {...props}
+      {...(props as React.ComponentProps<typeof motion.div>)}
     >
       <div className="relative z-10">{children}</div>
-      {/* Optional: Add a subtle gradient orb or noise texture here if desired */}
-      <div className="absolute -inset-[100px] opacity-20 bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 translate-x-[-150%] hover:animate-shine pointer-events-none" />
-    </div>
+      {/* Shimmer overlay */}
+      <div className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden">
+        <div className="absolute -inset-[100px] bg-gradient-to-r from-transparent via-white/[0.04] to-transparent skew-x-12 animate-shimmer" />
+      </div>
+    </motion.div>
   );
 }

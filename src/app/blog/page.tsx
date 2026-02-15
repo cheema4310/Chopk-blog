@@ -6,17 +6,17 @@ import Link from "next/link";
 import { ArrowRight, Calendar, User } from "lucide-react";
 
 export const metadata = {
-  title: "Blog - ChopK",
-  description: "Insights on men's pelvic floor health, performance, and control.",
+  title: "Pelvic Floor Training Blog for Men — Guides, Tips & Science | ChopK",
+  description: "Expert guides on pelvic floor exercises, kegel training, and building control & confidence for men. Science-backed advice from the ChopK team.",
 };
 
 export default function BlogIndex() {
   return (
     <div className="container mx-auto px-4 py-20 min-h-screen">
       <div className="flex flex-col items-center text-center mb-16 space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-white">The Training Log</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-white">The Pelvic Floor Training Log for Men</h1>
         <p className="text-sub-text/70 max-w-xl text-lg">
-          No fluff. Just practical guides on reclaiming control and performance.
+          Science-backed guides on kegel exercises, control, and confidence — no fluff, no shame.
         </p>
       </div>
 

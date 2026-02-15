@@ -59,17 +59,17 @@ function AnimatedWord() {
   }, [text, isDeleting, index]);
 
   return (
-    <span className="relative inline-block align-baseline whitespace-nowrap">
-      {/* Ghost (invisible) – reserves exact width + height of the longest word so nothing jumps */}
+    <span className="relative inline-block align-baseline whitespace-nowrap leading-tight">
+      {/* Ghost (invisible) – reserves exact width + height of the tallest word (Kegel, has deepest descender 'g') so nothing jumps or clips */}
       <span
-        className="invisible pointer-events-none whitespace-nowrap"
+        className="invisible pointer-events-none whitespace-nowrap leading-tight"
         aria-hidden="true"
       >
-        Muscle,
+        Kegel,
       </span>
 
       {/* Visible typing text + cursor – perfectly overlays the ghost */}
-      <span className="absolute left-0 top-0 flex items-baseline text-transparent bg-clip-text bg-gradient-to-r from-accent via-[#FF8F50] to-accent-dark whitespace-nowrap">
+      <span className="absolute left-0 top-0 flex items-baseline text-transparent bg-clip-text bg-gradient-to-r from-accent via-[#FF8F50] to-accent-dark whitespace-nowrap leading-tight">
         {text}
         <motion.span
           animate={{ opacity: [1, 0] }}
